@@ -1,0 +1,58 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1E1E1E;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+
+.dropzone {
+    border: 2px dashed #4a4a4a;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.dropzone:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.file-input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.loading {
+    display: none;
+    text-align: center;
+    color: #888;
+    margin: 20px 0;
+}
+
+.results {
+    margin-top: 20px;
+}
+
+.extracted-text {
+    background-color: rgba(30,30,30,0.5);
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+}

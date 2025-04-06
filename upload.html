@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Image Extractor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-bg': '#121212',
+                        'dark-input': '#1E1E1E',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-bg text-white min-h-screen flex items-center justify-center">
+    <div class="w-full max-w-xl px-6">
+        <div class="bg-dark-input/50 backdrop-blur-lg rounded-2xl p-8 shadow-2xl">
+            <h1 class="text-3xl font-bold text-center mb-8">Document Image Extractor</h1>
+            
+            <div id="dropzone" class="border-2 border-dashed border-gray-600 rounded-2xl p-8 text-center 
+                                        hover:bg-white/10 transition-all duration-300 cursor-pointer group">
+                <input type="file" id="fileInput" accept="image/*" 
+                       class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
+                <p class="text-gray-400 group-hover:text-white transition-colors">
+                    Drag and drop an image or click to select
+                </p>
+            </div>
+            
+            <div id="loading" class="hidden text-center text-gray-400 mt-6">
+                Processing image... Please wait
+            </div>
+            
+            <div id="summarizeSection" class="hidden mt-4">
+                <button id="summarizeBtn" class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors">
+                    <a href="summary.html"> Summary </a>
+                </button>
+            </div>
+            
+            <div class="results mt-6">
+                <div id="extractedText" class="bg-dark-input/30 rounded-lg p-4 mb-4 text-gray-300"></div>
+                <div id="summary" class="bg-dark-input/30 rounded-lg p-4 italic text-gray-400 hidden"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/2.1.0/tesseract.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="js/upload.js"></script>
+</body>
+</html>
